@@ -1,0 +1,225 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: "Raleway" !important;
+}
+
+/* body flex adjustment for  sticky footer */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* --- */
+
+.brand-logo img {
+    max-height: 54px;
+}
+
+.hidden {
+    display: none;
+}
+
+.screen-unit {
+    width: 100vw;
+    height: 100vh;
+}
+
+.screen-height {
+    height: 100vh;
+}
+
+.screen-width {
+    width: 100vh;
+}
+
+.more-screen-height {
+    height: 110vh;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+/* padding */
+
+.padded-compact {
+    padding: 20px;
+}
+
+.padded-comfortable {
+    padding: 45px;
+}
+
+.padded-cozy {
+    padding: 70px;
+}
+
+.padded-top-compact {
+    padding-top: 20px;
+}
+
+.padded-top-comfortable {
+    padding-top: 45px;
+}
+
+.padded-top-cozy {
+    padding-top: 70px;
+}
+
+.padded-bottom-compact {
+    padding-bottom: 20px;
+}
+
+.padded-bottom-comfortable {
+    padding-bottom: 45px;
+}
+
+.padded-bottom-cozy {
+    padding-bottom: 70px;
+}
+
+/* margin */
+
+.margined-bottom-comfortable {
+    margin-bottom: 45px;
+}
+
+.margined-top-comfortable {
+    margin-top: 45px;
+}
+
+.margined-bottom-compact {
+    margin-bottom: 20px;
+}
+
+.margined-top-compact {
+    margin-top: 20px;
+}
+
+/* --- */
+
+.strong {
+    font-weight: 600;
+}
+
+.rounded {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.overflow-y-scroll {
+    overflow-y: scroll;
+}
+
+.overflow-x-scroll {
+    overflow-x: scroll;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.slides img {
+    filter: brightness(50%) saturate(150%);
+}
+
+img.dark {
+    filter: brightness(60%) saturate(150%);
+}
+
+.zoomer {
+    transition: transform 0.25s ease-in-out;
+}
+
+.zoomer:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.fader {
+    filter: brightness(60%);
+}
+
+.fader:hover {
+    filter: brightness(90%);
+}
+
+.card.tiny {
+    height: 250px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.gradient-orange {
+    background: #ff6f00;
+    background: linear-gradient(to bottom, #ff6f00, #e65100);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav ul li a:hover,
+nav ul li:hover {
+    background: #ffb74d;
+}
+
+.right-border-orange {
+    border-right: 3px solid orange;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+.blink {
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+
+
+.spacey label {
+    margin-right: 20px;
+}

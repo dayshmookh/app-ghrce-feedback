@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Dayshmookh Apps Limited. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *"
+    />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+
+
+    <!--Import Google Icon Font-->
+    <link href="css/MaterialIcons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+    <title>Feedback hub</title>
+</head>
+
+<body class="app grey lighten-3">
+
+
+    <header>
+        <nav>
+            <div class="nav-wrapper green">
+                <a href="#!" class="brand-logo">Feedback hub</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <!-- <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="index.html">login</a>
+                    </li>
+                </ul> -->
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <a href="index.html">Login</a>
+            </li>
+            <li>
+                <a href="form.html">Form</a>
+            </li>
+            <li>
+                <a href="done.html">Done</a>
+            </li>
+        </ul>
+
+
+    </header>
+
+
+    <main>
+        <div class="green full-width white-text card-panel no-margin no-padding">
+            <div class="container">
+                <div class="row ">
+                    <p class="light col s4">ID:
+                        <span class="strong" id="student_id">12345</span>
+                    </p>
+                    <p class="light col s8">Branch:
+                        <span class="strong" id="student_branch">Computer Science</span>
+                    </p>
+                    <p class="light col s12">Name:
+                        <span class="strong" id="student_name">Krushn Dayshmookh</span>
+                    </p>
+
+
+                    <p class="light col s6">Semester:
+                        <span class="strong" id="student_sem">5</span>
+                    </p>
+                    <p class="light col s6">Section:
+                        <span class="strong" id="student_sec">B</span>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <ul class="tabs green">
+                    <li class="tab">
+                        <a href="#test1" class="white-text">LP</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#test2" class="white-text">DAA</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#test3" class="white-text">ES</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#test4" class="white-text">PIPL</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="container full-width white padded-bottom-cozy">
+
+            <form action="/">
+
+
+                <div class="row">
+
+                    <div id="test1" class="col s12">
+                        <div class="collection with-header">
+                            <div class="collection-header light">Prof Suraj Bandichhode</div>
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Blackboard writing and organization.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Audio- Visual aids used.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group2" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group2" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group2" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group2" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group2" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Lecture delivered with emphasis on fundamental concepts and with illustrative examples and faculty has command over the subject.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group3" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group3" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group3" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group3" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group3" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Difficult topics were taught with adequate attention and ease.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group4" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group4" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group4" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group4" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group4" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="test2" class="col s12">
+                        <div class="collection with-header">
+                            <div class="collection-header light">Prof. Lalit Dole</div>
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Blackboard writing and organization.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group5" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group5" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group5" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group5" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group5" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Audio- Visual aids used.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group6" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group6" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group6" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group6" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group6" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Lecture delivered with emphasis on fundamental concepts and with illustrative examples and faculty has command over the subject.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group7" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group7" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group7" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group7" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group7" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Difficult topics were taught with adequate attention and ease.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group8" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group8" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group8" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group8" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group8" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="test3" class="col s12">
+                        <div class="collection with-header">
+                            <div class="collection-header light">Prof. S.K. Pillai</div>
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Blackboard writing and organization.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group9" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group9" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group9" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group9" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group9" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Audio- Visual aids used.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group10" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group10" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group10" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group10" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group10" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Lecture delivered with emphasis on fundamental concepts and with illustrative examples and faculty has command over the subject.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group11" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group11" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group11" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group11" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group11" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Difficult topics were taught with adequate attention and ease.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group12" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group12" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group12" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group12" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group12" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="test4" class="col s12">
+                        <div class="collection with-header">
+                            <div class="collection-header light">Prof. P.D. Saraf</div>
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Blackboard writing and organization.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group13" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group13" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group13" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group13" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group13" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Audio- Visual aids used.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group14" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group14" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group14" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group14" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group14" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Lecture delivered with emphasis on fundamental concepts and with illustrative examples and faculty has command over the subject.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group15" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group15" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group15" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group15" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group15" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="collection-item row">
+                                <div class="col s12">
+                                    Difficult topics were taught with adequate attention and ease.
+                                </div>
+                                <div class="col s12 spacey">
+                                    <label>
+                                        <input class="with-gap" name="group16" type="radio" />
+                                        <span class="green-text text-darken-2">1</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group16" type="radio" />
+                                        <span class="green-text text-darken-2">2</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group16" type="radio" />
+                                        <span class="green-text text-darken-2">3</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group16" type="radio" />
+                                        <span class="green-text text-darken-2">4</span>
+                                    </label>
+                                    <label>
+                                        <input class="with-gap" name="group16" type="radio" />
+                                        <span class="green-text text-darken-2">5</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+                <div class="col s12 center">
+                    <button class="btn waves-effect waves-light green" type="submit" name="action">Submit</button>
+                </div>
+
+            </form>
+        </div>
+
+
+        <!-- 
+        <div class="container">
+
+            <div class="card rounded">
+
+                <div class="container">
+                    <table class="highlight responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Subject</th>
+                                <th>Teacher</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Eclair</td>
+                                <td>Qwertyuiop</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jellybean</td>
+                                <td>Asdfghjkl</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Lollipop</td>
+                                <td>Zxcvbnm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+        </div> -->
+
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        // app.initialize();
+        M.AutoInit();
+
+        /* $(document).ready(function () {
+            $('.sidenav').sidenav();
+        }); */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "GHRCE Feedback",
+  "short_name": "GHRCE Feedback",
+  "version": "com.dayshmookh.ghrce.feedback",
+  "description": "App to collect feedback from students.",
+  "author": "Krushn Dayshmookh",
+  "icons": [],
+  "start_url": "index.html"
+}
